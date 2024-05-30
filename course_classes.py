@@ -53,7 +53,7 @@ class AvailableTime:
         for i in range(6):
             self.time.append(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'A', 'B', 'C', 'D'])
 
-    def remove_time(self, date, time):
+    def remove_time(self, date, time):  # ex. if it takes date= [一,三], time=[[1,2,3][1]], it will remove周一123 and 周三1
         for c, d in enumerate(date):
             for t in time[c]:
                 self.time[DAYS_DICT[d]-1].remove(t)
